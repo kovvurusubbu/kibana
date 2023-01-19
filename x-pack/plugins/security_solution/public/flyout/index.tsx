@@ -12,6 +12,8 @@ import { ExpandableFlyout } from '../common/components/expandable_flyout';
 import { flyoutsSelector } from '../common/store/flyout/selectors';
 import { closeSecurityFlyout } from '../common/store/flyout/actions';
 import type { SecurityFlyoutScope } from '../common/store/flyout/model';
+// eslint-disable-next-line @kbn/imports/no_boundary_crossing
+import { expandableFlyoutPanels } from './test/panels';
 
 export interface SecurityFlyoutProps {
   /**
@@ -52,7 +54,7 @@ export const SecurityFlyout = React.memo(
 
     return (
       <ExpandableFlyoutProvider scope={scope} close={close} layout={scopedFlyout}>
-        <ExpandableFlyout className={className} panels={[]} onClose={close} />
+        <ExpandableFlyout className={className} panels={expandableFlyoutPanels} onClose={close} />
       </ExpandableFlyoutProvider>
     );
   }
