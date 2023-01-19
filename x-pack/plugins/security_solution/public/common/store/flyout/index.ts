@@ -5,8 +5,8 @@
  * 2.0.
  */
 
-export { appSelectors } from './app';
-export { dragAndDropSelectors } from './drag_and_drop';
-export { inputsSelectors } from './inputs';
-export { sourcererSelectors } from './sourcerer';
-export { flyoutSelectors } from './flyout';
+import * as flyoutActions from './actions';
+import * as flyoutSelectors from './selectors';
+import * as flyoutModel from './model';
+
+export { flyoutActions, flyoutModel, flyoutSelectors };
